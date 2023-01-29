@@ -1,0 +1,13 @@
+[Unit]
+Description=Camera Capture service for pi-cctv
+StartLimitIntervalSec=2 #initial delay is given for backend to boot up
+
+[Service]
+Type=simple
+User=ubuntu
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/python3 /home/ubuntu/pi_cctv_camera/camera.py
+
+[Install]
+WantedBy=multi-user.target

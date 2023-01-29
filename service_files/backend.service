@@ -1,0 +1,13 @@
+[Unit]
+Description=backend
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=ubuntu
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/python3 /home/ubuntu/backend/app.py
+
+[Install]
+WantedBy=multi-user.target

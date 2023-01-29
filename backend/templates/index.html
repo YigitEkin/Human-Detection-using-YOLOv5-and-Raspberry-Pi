@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div
+      className="App"
+      id="app"
+      style="
+        display: 'flex';
+        justify-content: 'center';
+        align-items: 'center';
+        width: '100%';
+        height: '100%';
+      "
+    >
+      <header className="App-header">
+        <div style="display: 'flex'; flex-direction: 'column'">
+          <img
+            id="image"
+            src="data:image/png;base64, {{data}}"
+            alt=""
+            style="width: 'fit-content'; height: 'auto'"
+          />
+          <h1>Timestamp of the latest image is: {{timestamp}}</h1>
+        </div>
+      </header>
+    </div>
+  </body>
+  <script>
+    setInterval(() => {
+      axios.get("/").then((e) => {
+        console.log(e);
+        document.getElementById("app").innerHTML = e.data;
+      });
+    }, 10000);
+  </script>
+</html>
