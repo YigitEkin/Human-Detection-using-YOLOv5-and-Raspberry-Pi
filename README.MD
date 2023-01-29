@@ -18,5 +18,5 @@ The camera module takes photos at a specified interval and sends the images to t
 
 ## Acknowledgments
 
-* YOLOv5 object detection model by [Ultralytics LLC](https://github.com/ultralytics/yolov5)
-* [Raspberry Pi Foundation](https://www.raspberrypi.org/)
+- YOLOv5 object detection model by [Ultralytics LLC](https://github.com/ultralytics/yolov5)
+- [Raspberry Pi Foundation](https://www.raspberrypi.org/)
